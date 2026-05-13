@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Clothes Store</title>
+</head>
+<body>
+    <header style="display: flex; align-items: center;justify-content: center;position: relative;"><h1>Tony's Store</h1> <a href="cartPage.html"><i class="fa-solid fa-cart-shopping" style="font-size:24px; color:rgb(255, 255, 255);position: absolute;right: 10px;cursor: pointer;top: 50%; transform: translate(-50%,-50%);"></i></a></header>
+    <div class="ParentContainer" id = "nav">
+        <div class="inputContainer">
+            <input type="text" name="Search" class="input" id="Search">
+            <span class = "searchIcon" onclick="searchBtn(input.value)">&#128269;</span>
+            <label for="Search" class="placeHolder">Search...</label>
+        </div>
+        <div class = "logo"><img src="../images/background.jpg" alt="" style="width: 100px; height: 100px; border-radius: 50%;"></div>
+        <div class="filterContainer">
+            <label for="filter" class="filterLabel">Filter By:</label>
+            <select name="filter" id="filter"></select>
+            <button onclick="sort(select.value)">Apply</button>
+        </div>
+    </div>
+    <div class="container" id = "To_Inject"></div>
+    <div class = "numbers" id = "totalPages"></div>
+    <div class = "info">
+        <footer class = "social">
+            <a href="" class = 'facebookContainer'>
+                <span class = 'facebook'></span>
+                <span class = 'fab fa-facebook facebook'></span>
+            </a>
+            <a href="https://wa.me/963937024305" target="_blank" class="whatsContainer">
+                <span class = 'whatsapp'></span>
+                <span class="fab fa-whatsapp icon whatsapp"></span>
+            </a>
+        </footer>
+    </div>
+    <script src="../data/products-info.js"></script>
+    <script src = "../data/functions.js"></script>
+    <script src="../data/FPscript.js"></script>
+</body>
+</html>

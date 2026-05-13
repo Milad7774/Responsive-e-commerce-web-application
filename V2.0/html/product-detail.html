@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Styles/stylesSecond.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Clothes Store</title>
+</head>
+<body>
+    <header class="header">Tony's Supermarket</header>
+    <a href="index.html" class="backTo">Back to Browsing</a>
+    <div class = 'imagesContainer'>
+        <span class = 'imageTracker'></span>
+        <span id="heart" class = "favourite" onclick="toggle()">&#9829;</span>
+        <div id = 'injectImages'></div>
+        <span class = 'rightArrow'><span class = "click">&rarr;</span></span>
+        <span class = 'leftArrow' ><span class="click">&larr;</span></span>
+    </div>
+    <div class = "description" id = 'injectDescription'></div>
+    <div class = "buyContainer" id = "injectPrice">
+        <a href="https://wa.me/963937024305" target="_blank" class="contact">
+            <span>Whatsapp</span>
+            <span class="fab fa-whatsapp icon"></span>
+        </a>
+    </div>
+</body>
+<script src="../data/products-info.js"></script>
+<script src="../data/SPscript.js"></script>
+</html>
