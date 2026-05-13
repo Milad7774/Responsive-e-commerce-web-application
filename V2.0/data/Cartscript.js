@@ -1,4 +1,4 @@
-let toShow = JSON.parse(localStorage.getItem('favourite'));
+let toShow = JSON.parse(localStorage.getItem('favourite') ? JSON.parse(localStorage.getItem('favourite') : []);
 const toInject = document.getElementById('toInject');
 if(toShow.length === 0){
     check();
