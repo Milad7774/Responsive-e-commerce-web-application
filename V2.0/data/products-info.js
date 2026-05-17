@@ -79,7 +79,7 @@ const products = {
     'item12' : {
         img : '../images/photo1.jpeg',
         price: '10',
-        index: 'xlarge'.
+        index: 'xlarge',
         gallery: ["../images/photo2.jpg","../images/photo1.jpeg"],
         description: 'Sample Pictures'
     },
