@@ -1,22 +1,32 @@
-//Grabbing Elements
-const To_Inject = document.getElementById("To_Inject");
-const nav = document.getElementById('nav');
+// Global variables
+let products = {};
+let keysProducts = Object.keys(products);
+let usedKeys = keysProducts;
+let totalItems = keysProducts.length;
 const select = document.getElementById('filter');
+const Choices = ['Default', 'Price Acsending', 'Price Descending'];
+const To_Inject = document.getElementById("To_Inject");
 const injectNumbers = document.getElementById('totalPages');
 const urlParams = new URLSearchParams(window.location.search);
 let currentPage = urlParams.get('page');
-const keysProducts = Object.keys(products);
-let usedKeys = keysProducts;
 let currentSearch = "";
 const itemsPerPage = 3;
-const totalItems = keysProducts.length;
 const inputFocus = document.querySelector('label');
 const input = document.querySelector('input');
-const body = document.querySelector('body');
-const Choices = ['Default', 'Price Acsending', 'Price Descending'];
 
+// Fetch products
+fetch('../API/get-products.php')
+    .then(response => response.json())
+    .then(data => {
+        products = data;
+         keysProducts = Object.keys(products);
+         usedKeys = keysProducts;
+         totalItems = keysProducts.length;
+        start()
+    })
+    .catch(error => console.error('Error loading products:', error));
 
-document.addEventListener("DOMContentLoaded", () => {
+function start() {
 
     //Building Select Tag Options
     buildOptions();
@@ -91,8 +101,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     });
-});
-
+    
+}
 
 
 
