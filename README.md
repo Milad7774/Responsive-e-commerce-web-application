@@ -14,3 +14,9 @@ The V3.0 folder contains the complete application with PHP backend, admin panel,
 - Image upload with automatic folder management
 - JSON data storage with JS file synchronization
 - Edit/Delete products with recursive file deletion
+
+- ### Features in V4.0 (Code)
+- Pretty much Same as V3.0 
+- Moved From Saving items in products.json to using a Database
+- Full CRUD operations are still Available
+- Same as auto folder clean up on deletion
