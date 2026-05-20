@@ -98,7 +98,7 @@ function build(keys = keysProducts, currentPage = 1){
         anchor.append(img_create);
         }
         catch(error){
-            console.warn(`Product at index ${i} not found`, error);
+            console.warn(`Product at search_keyword ${i} not found`, error);
             break;
         }
     }
@@ -168,7 +168,7 @@ function search(searchvalue , page = 1){
         let updatedUrl = new URL(window.location.href);
         let currentUrl = new URLSearchParams(window.location.search);
         for(let i = 0; i < keysProducts.length; i++){
-            if((products[keysProducts[i]].index).includes(searchvalue.toLowerCase())){
+            if((products[keysProducts[i]].search_keyword).includes(searchvalue.toLowerCase())){
                 filteredKeys.push(keysProducts[i]);
             }
         }
@@ -217,7 +217,7 @@ function showToast(message, duration = 2000) {
         padding: 12px 24px;
         border-radius: 30px;
         font-size: 14px;
-        z-index: 9999;
+        z-search_keyword: 9999;
         animation: fadeInOut 0.3s;
     `;
     
