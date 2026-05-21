@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+table{
+    width: 100%;
+}
+table, tr, td, th{
+    border-collapse: collapse;
+    border: 1px solid rgb(0, 0, 0);
+}
+tr,td,th{
+    padding: 10px;
+    text-align: center;
+    width: auto;
+} 
+img{
+    width: 100px;
+    height: 125px;
+}
+td{
+    position: relative;
+}
+.table{
+    position: absolute;
+    top: calc(40px + 18.4px);
+
+}
+.edit{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    transform: translate(50%,0);
+    user-select: none;
+}
+.delete{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 30px;
+    transform: translate(50%,0);
+    user-select: none;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.goBack{
+    position: relative;
+    width: 100%;
+    background: linear-gradient(to top, black, white);
+    padding: 20px;
+    text-align: center;
+}
+
+.link{
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid black;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    background-color: white;
+}
+.linkStore{
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+   position: absolute;
+   right: 10px;
+   top: 50%;
+   transform: translate(0, -50%);
+   color: black;
+   background-color: rgb(255, 255, 255);
+}

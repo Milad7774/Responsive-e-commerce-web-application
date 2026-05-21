@@ -1,0 +1,237 @@
+@keyframes scale {
+    0%{font-size: 30px;}
+    50%{font-size: 50px;}
+    100%{font-size: 30px;}
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+}
+
+.header {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to top, #1e3c72, #0b61f5);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    letter-spacing: 1px;
+}
+.backTo{
+    transform: translate(0%,-50%);
+    padding: 10px;
+    background: linear-gradient(135deg, #f8b500, #ff6600);
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+}
+
+.imagesContainer {
+    position: relative;
+    height: 415px;
+    width: 317.6px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.3);
+    background: #fff;
+}
+
+.imageTracker {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    z-index: 999;
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px 0 0 20px;
+    backdrop-filter: blur(4px);
+    font-family: monospace;
+}
+.favourite{
+    position: absolute;
+     transform: translate(-50%,-50%);
+     left: 20px;
+     top: 20px;
+     z-index: 999;
+     color: white;
+     font-size: 30px;
+     cursor: pointer;
+     user-select: none;
+}
+
+#injectImages {
+    height: 415px;
+    width: 317.8px;
+    position: relative;
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+}
+
+.images {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.rightArrow, .leftArrow {
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    color: white;
+    font-size: 2em;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.rightArrow {
+    right: 10px;
+}
+
+.leftArrow {
+    left: 10px;
+}
+
+.rightArrow:hover, .leftArrow:hover {
+    background-color: rgba(255,255,255,0.9);
+    color: #333;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.click {
+    user-select: none;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.description {
+    margin-top: 30px;
+    max-width: 500px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #333;
+    background: white;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    line-height: 1.6;
+}
+
+.buyContainer {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.priceNumber {
+    background: linear-gradient(135deg, #f8b500, #ff6600);
+    height: 45px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    margin: 0;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #25D366;
+    color: white;
+    height: 45px;
+    width: 130px;
+    text-decoration: none;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    gap: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact:hover {
+    background-color: #128C7E;
+    transform: scale(1.02);
+    color: white;
+    border: none;
+}
+
+.icon {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    body::before {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+    .imagesContainer {
+        width: 317.8px;
+        height: 415px;
+        aspect-ratio: 1 / 1.3;
+    }
+    #injectImages {
+        width: 317.8px;
+        height: 415px;
+    }
+    .images {
+        width: 100%;
+        height: 100%;
+    }
+    .description {
+        font-size: 0.95rem;
+        padding: 15px;
+        margin: 20px;
+    }
+    .priceNumber, .contact {
+        height: 40px;
+        width: 110px;
+        font-size: 1rem;
+    }
+    .rightArrow, .leftArrow {
+        height: 35px;
+        width: 35px;
+        font-size: 1.5em;
+    }
+}
