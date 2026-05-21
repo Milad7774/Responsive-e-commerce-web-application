@@ -1,8 +1,8 @@
 <?php
     session_start();
-    $username = 'Tony@12mkjll';
-    $salt = 'ZBWIUD!@#';
-    $password = 'Tony@123';
+    $username = 'Your-Username';
+    $salt = 'Some-Salt';
+    $password = 'Your-Password';
     if(isset($_POST['submit'])){
         $name = $_POST['username'];
         $pass = hash('sha256', $_POST['password'].$salt);
