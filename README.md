@@ -17,5 +17,6 @@ The V3.0 folder contains the complete application with PHP backend, admin panel,
 
 - ### Features in V4.0 (Code)
 - Pretty much Same as V3.0 
-- Moved From Saving items in products.json to using a Database
+- Moved From Saving items in products.json to using a Database(MySql)
+- MySql Apache server 
 - Full CRUD operations are still Available
