@@ -1,7 +1,7 @@
 # Responsive E-Commerce Web Application
 
-## Live Demo (V2.0 - Frontend Only)
-[View the site](https://milad7774.github.io/Responsive-e-commerce-web-application/V2.0/html/index.html)
+## Live Demo (V3.0 - Frontend Only)
+[View the site](https://milad7774.github.io/Responsive-e-commerce-web-application/V3.0/html/index.html)
 
 ## V3.0 - Full Version with Admin Panel (Code Only)
 The V3.0 folder contains the complete application with PHP backend, admin panel, and image upload functionality.
