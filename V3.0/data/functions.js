@@ -30,31 +30,57 @@ function replace(Number , keys = keysProducts) {
         const start = itemsPerPage * (Num - 1);
         
         for (let i = start; i < keys.length && P_shows < itemsPerPage; i++) {
+            //data
             let current_img = products[keys[i]].img;
+
             let current_price =  products[keys[i]].price + "$";
             
+            let current_stock = products[keys[i]].stock;
+            //creating images
             const img_create = document.createElement('img');
             img_create.alt = 'Failed To load';
             img_create.src = current_img;
             img_create.classList.add("product-image");
-            
+            //creating anchor
             const anchor = document.createElement('a');
             anchor.href = `product-detail.html?id=${keys[i]}`;
-            
+            //creating div
             const div_clothes = document.createElement('div');
             div_clothes.classList.add('clothes');
-            
+            //creeating span
             const span_hoverEffect = document.createElement('span');
             const span = document.createElement('span');
+            const stock = document.createElement('span');
+            //price
             span.classList.add("priceTag");
             span.innerHTML = current_price;
+            //checkout
             span_hoverEffect.innerHTML = "Check Out";
             span_hoverEffect.classList.add('hover-effect');
-            
+            //Stock
+             if(current_stock == 0){
+                stock.innerHTML = "No Stock Left!";
+                stock.classList.add("noStock");
+            }
+            else if(current_stock < 5){
+                stock.innerHTML = "Only " + current_stock + " left in Stock";
+                stock.classList.add("noStock");
+            }
+            else{
+                stock.innerHTML = "Stock Left " + current_stock;
+                stock.classList.add("stock");
+            }
+            //adding
             container.append(div_clothes);
+
             div_clothes.append(anchor);
+
             div_clothes.append(span);
+
+            div_clothes.append(stock);
+
             anchor.append(span_hoverEffect);
+
             anchor.append(img_create);
             P_shows++;
         }
