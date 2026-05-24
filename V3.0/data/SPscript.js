@@ -1,4 +1,5 @@
 //Grabbing Elements
+const swiper = document.getElementById("imagesContainer");
 const images = document.getElementById('injectImages');
 const urlParams = new URLSearchParams(window.location.search);
 const key = urlParams.get('id');
@@ -126,3 +127,26 @@ function toggle(){
         heart.style.animation = "";
     }
 }
+//Swiping
+swiper.addEventListener('touchstart', function swipe(event){
+    let x_before = event.touches[0].clientX;
+    console.log("mousedown on: " + x_before);
+    
+    swiper.addEventListener('touchend', (event) => {
+        let x_after = event.changedTouches[0].clientX;
+        console.log("mouseup on:" + x_after);
+        
+        if(x_before - x_after > 0){
+            console.log("SWIPE RIGHT");
+            transofromRight();
+        }
+        else if(x_before - x_after < 0){
+            console.log("SWIPE LEFT");
+            transofromLeft();
+        }
+    }, { once: true }); // ← Auto-removes after one execution
+    swiper.removeEventListener('touchstart', swipe);
+    setTimeout(()=>{
+        swiper.addEventListener('touchstart', swipe)
+    }, 500)
+})
