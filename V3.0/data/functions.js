@@ -414,9 +414,9 @@ function searchByRange(){
     }
 
     //Range Data
-    let min = Number(document.getElementById('minimum').value);
+    let min = document.getElementById('minimum').value;
 
-    let max =Number(document.getElementById('maximum').value);
+    let max = document.getElementById('maximum').value;
 
 
     console.log(min, max);
@@ -427,7 +427,7 @@ function searchByRange(){
     else if(isNaN(parseFloat(min)) || isNaN(parseFloat(max))){
         showToast("Please Enter Numbers!");
     }
-    else if(min > max){
+    else if(Number(min) >Number(max)){
         showToast("Minimum Price must Be lower or equal to Maximum Price!", 3000);
         console.log(min, max, "After");
     }
@@ -435,7 +435,7 @@ function searchByRange(){
         window.history.pushState({}, '', updatedUrl);
         let rangedKeys = [];
         for(let i = 0; i < usedKeys.length; i++){
-            if(products[usedKeys[i]].price >= min && products[usedKeys[i]].price <= max ){
+            if(products[usedKeys[i]].price >= Number(min) && products[usedKeys[i]].price <= Number(max) ){
                 rangedKeys.push(usedKeys[i]);
             }
         }
@@ -449,3 +449,4 @@ function searchByRange(){
         }
     }
 }
+
