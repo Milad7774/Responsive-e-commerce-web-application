@@ -444,6 +444,7 @@ function searchByRange(){
             injectNumbers.innerHTML = "";
         }
         else{
+            //Filtering usedKeys Based on Range Given
             rangedKeys = [...rangedKeys].sort((a,b) => products[a].price - products[b].price);
             build(rangedKeys);
         }
