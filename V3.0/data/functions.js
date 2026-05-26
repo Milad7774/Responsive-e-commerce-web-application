@@ -399,10 +399,27 @@ function priceRange(){
     }
 }
 function searchByRange(){
-    //Range Data
-    let min = document.getElementById('minimum').value;
 
-    let max = document.getElementById('maximum').value;
+    //looking if there is a search value
+    let currentUrl = new URLSearchParams(window.location.search);
+    //updating url
+    let updatedUrl = new URL(window.location.href);
+    //setting page to 1
+    updatedUrl.searchParams.set('page', 1);
+
+    if(currentUrl.has('search')){
+        let search = currentUrl.get('search');
+
+        updatedUrl.searchParams.set('search', search);
+    }
+
+    //Range Data
+    let min = Number(document.getElementById('minimum').value);
+
+    let max =Number(document.getElementById('maximum').value);
+
+
+    console.log(min, max);
 
     if(min == "" || max == ""){
         showToast("All Fileds must be Filled!");
@@ -411,13 +428,15 @@ function searchByRange(){
         showToast("Please Enter Numbers!");
     }
     else if(min > max){
-        showToast("Minimum Price must Be lower or equal to Maximum Price!", 3000)
+        showToast("Minimum Price must Be lower or equal to Maximum Price!", 3000);
+        console.log(min, max, "After");
     }
     else{
+        window.history.pushState({}, '', updatedUrl);
         let rangedKeys = [];
-        for(let i = 0; i < keysProducts.length; i++){
-            if(products[keysProducts[i]].price >= min && products[keysProducts[i]].price <= max ){
-                rangedKeys.push(keysProducts[i]);
+        for(let i = 0; i < usedKeys.length; i++){
+            if(products[usedKeys[i]].price >= min && products[usedKeys[i]].price <= max ){
+                rangedKeys.push(usedKeys[i]);
             }
         }
         if(rangedKeys == ''){
