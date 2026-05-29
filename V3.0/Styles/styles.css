@@ -463,6 +463,7 @@ select:focus {
 .buttonJoiner{
     display: flex;
     flex-wrap: nowrap;
+    gap: 10px
 }
 
 /* Responsive design */
