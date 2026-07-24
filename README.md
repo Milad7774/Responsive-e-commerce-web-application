@@ -1,7 +1,10 @@
 # Responsive E-Commerce Web Application
 
-## Live Demo (V3.0 - Frontend Only)
+
+
+## Live Demo
 [View the site](https://milad7774.github.io/Responsive-e-commerce-web-application/V3.0/html/index.html)
+[Admin Panel](https://e-commerce-milad.infinityfree.me/Admin%20Panel/logout.php)
 
 ## V3.0 - Full Version with Admin Panel (Code Only)
 The V3.0 folder contains the complete application with PHP backend, admin panel, and image upload functionality.
@@ -29,7 +32,3 @@ The V3.0 folder contains the complete application with PHP backend, admin panel,
 - Moved From Saving items in products.json to using a Database(MySql)
 - MySql Apache server 
 - Full CRUD operations are still Available
-
-- ### UPDATE
-- #### Access Admin Panel Here:
-- [Admin Panel](https://e-commerce-milad.infinityfree.me/Admin%20Panel/logout.php)
