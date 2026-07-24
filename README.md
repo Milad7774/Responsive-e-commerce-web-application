@@ -3,7 +3,7 @@
 
 
 ## Live Demo
-[View the site](https://milad7774.github.io/Responsive-e-commerce-web-application/V3.0/html/index.html) <br>
+[View the site](https://e-commerce-milad.infinityfree.me/html/index.html?page=1) <br>
 [Admin Panel](https://e-commerce-milad.infinityfree.me/Admin%20Panel/logout.php)
 
 ## V3.0 - Full Version with Admin Panel (Code Only)
