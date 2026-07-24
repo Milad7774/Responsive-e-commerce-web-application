@@ -29,3 +29,7 @@ The V3.0 folder contains the complete application with PHP backend, admin panel,
 - Moved From Saving items in products.json to using a Database(MySql)
 - MySql Apache server 
 - Full CRUD operations are still Available
+
+- ### UPDATE
+- #### Access Admin Panel Here:
+- [Admin Panel](https://e-commerce-milad.infinityfree.me/Admin%20Panel/logout.php)
