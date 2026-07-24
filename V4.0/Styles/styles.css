@@ -1,4 +1,8 @@
 
+@keyframes filterFade {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -186,6 +190,21 @@ select:focus {
 .filterContainer button:hover {
     background: #e55a00;
 }
+.maxRange, .minRange{
+    width: 120px;
+    padding: 5px 0;
+    border-radius: 20px;
+    text-align: center;
+}
+.Valid{
+    border: 1px solid rgb(0, 207, 0);
+    border-radius: 20px;
+}
+.notValid{
+    border: 1px solid rgb(250, 0, 0);
+    border-radius: 20px;
+}
+
 
 /* Product grid container */
 .container {
@@ -282,6 +301,32 @@ select:focus {
     right: 12px;
     bottom: 12px;
     background: linear-gradient(135deg, #f8b500, #ff6600);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    z-index: 5;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.stock{
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    background: linear-gradient(135deg, #f8b500, #ff6600);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    z-index: 5;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.noStock{
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    background: linear-gradient(135deg, #b81f00, #ce0e00);
     color: white;
     padding: 6px 12px;
     border-radius: 30px;
@@ -415,6 +460,10 @@ select:focus {
     color: white;
     border-color: rgb(161, 161, 161);
 }
+.buttonJoiner{
+    display: flex;
+    flex-wrap: nowrap;
+}
 
 /* Responsive design */
 @media (max-width: 585px) {
@@ -466,4 +515,16 @@ select:focus {
     .logo {
         display: none;
     }
+}
+@media (max-width: 475px) {
+    .filterContainer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .filterContainer input{
+        flex-grow: 1;
+    }
+}
+@media (max-width: 455px) {
+    
 }

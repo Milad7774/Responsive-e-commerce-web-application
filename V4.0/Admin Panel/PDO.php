@@ -1,11 +1,11 @@
 <?php
     $host = 'localhost';
 
-    $dbname = 'Your-DB';
+    $dbname = 'clothing_store';
 
-    $username = 'Your-username';
+    $username = 'root';
 
-    $password = 'Your-Password';
+    $password = '';
 
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
 

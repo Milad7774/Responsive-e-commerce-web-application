@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="../images/background.jpg">
     <title>Clothes Store</title>
 </head>
 <body>
-    <header style="display: flex; align-items: center;justify-content: center;position: relative;"><h1>Tony's Store</h1> <a href="cartPage.html"><i class="fa-solid fa-cart-shopping" style="font-size:24px; color:rgb(255, 255, 255);position: absolute;right: 10px;cursor: pointer;top: 50%; transform: translate(-50%,-50%);"></i></a></header>
+    <header style="display: flex; align-items: center;justify-content: center;position: relative;"><h1>E-commerce Store</h1> <a href="cartPage.html"><i class="fa-solid fa-cart-shopping" style="font-size:24px; color:rgb(255, 255, 255);position: absolute;right: 10px;cursor: pointer;top: 50%; transform: translate(-50%,-50%);"></i></a></header>
     <div class="ParentContainer" id = "nav">
         <div class="inputContainer">
             <input type="text" name="Search" class="input" id="Search">
@@ -16,7 +17,7 @@
             <label for="Search" class="placeHolder">Search...</label>
         </div>
         <div class = "logo"><img src="../images/background.jpg"" alt="" style="width: 100px; height: 100px; border-radius: 50%;"></div>
-        <div class="filterContainer">
+        <div class="filterContainer" id="filterContainer">
             <label for="filter" class="filterLabel">Filter By:</label>
             <select name="filter" id="filter"></select>
             <button onclick="sort(select.value)">Apply</button>

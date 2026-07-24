@@ -15,6 +15,11 @@ window.addEventListener('fs', ()=>{
          inputFocus = document.querySelector('label');
          input = document.querySelector('input');
          body = document.querySelector('body');
+         select = document.getElementById('filter');
+         range = document.getElementById('filterContainer');
+
+         //invoking price range
+         select.addEventListener('change', priceRange);
     
         //Building Select Tag Options
         buildOptions();

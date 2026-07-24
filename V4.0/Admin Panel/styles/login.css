@@ -16,7 +16,7 @@ body{
     justify-content: center;
     align-items: flex-start;
     height: 300px;
-    width: 300px;
+    width: clamp(200px, 80%, 300px);
     background: linear-gradient(135deg, red , blue);
     gap: 0px;
 }
@@ -41,4 +41,19 @@ button{
     padding: 10px;
     border-radius: 20px;
     cursor: pointer;
+}
+@media (max-width: 543px) {
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    .container div{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
 }

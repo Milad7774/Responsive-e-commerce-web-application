@@ -17,7 +17,7 @@
     $stmt = $pdo->prepare("SELECT * FROM products");
     $stmt->execute();
     //Making the table Head
-    echo '<table class = "table"><tr><th>Item Name</th><th>Main Image</th><th>Price</th><th>Search</th><th>Stock</th><th>Description</th><th>Gallery</th><th>Action</th></tr>';
+    echo '<div class = "table-container"><table class = "table"><tr><th>Item Name</th><th>Main Image</th><th>Price</th><th>Key Words</th><th>Stock</th><th>Description</th><th>Gallery</th><th>Action</th></tr>';
     //Echoing the data row by row
     while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
         $gallery = json_decode(($row['gallery']));
@@ -37,8 +37,8 @@
         echo "<form action = 'edit.php' method = 'POST' style = 'display: inline;'>";
         echo "<input type = 'hidden' name = 'edit_id' value = ". htmlentities($row['product_id']).">";
         echo "<button type = 'submit' style = 'color:green; cursor: pointer;'>&#x1F589;</button></td></form>";
-        
     }
+    echo "</table></div>"
 
     
 ?>
